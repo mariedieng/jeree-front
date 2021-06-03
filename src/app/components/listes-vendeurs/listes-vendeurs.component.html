@@ -1,0 +1,27 @@
+<!-- <div class="card mt-4">
+    <div class="card-body">
+        <h6>listes vendeurs</h6>
+            <li *ngFor="let vendeur of listesvendeurs">{{vendeur.users}}{{vendeur.adresseVendeur}} {{vendeur.telVendeur}}</li>
+
+    </div>
+</div> -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">users</th>
+        <th scope="col">adresse</th>
+        <th scope="col">tel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vendeur of listesvendeurs">
+        <th scope="row">1</th>
+        <td>{{vendeur.users}}</td>
+        <td>{{vendeur.adresseVendeur}}</td>
+        <td>{{vendeur.telVendeur}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+

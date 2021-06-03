@@ -1,0 +1,27 @@
+<!-- <div class="card mt-4">
+    <div class="card-body">
+        <h6>listes clients</h6>
+            <li *ngFor="let client of listesclients">{{client.users}}{{client.adresseClient}} {{client.telClient}}</li>
+
+    </div>
+</div> -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">users</th>
+        <th scope="col">adresse</th>
+        <th scope="col">tel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of listesclients">
+        <th scope="row">1</th>
+        <td>{{client.users}}</td>
+        <td>{{client.adresseClient}} </td>
+        <td>{{client.telClient}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+

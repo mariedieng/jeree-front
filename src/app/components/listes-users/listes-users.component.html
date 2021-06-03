@@ -1,0 +1,32 @@
+<!-- <div class="card mt-4">
+    <div class="card-body">
+        <h6>listes users</h6>
+            <li *ngFor="let user of listesusers">{{user.prenom}} {{user.nom}}   {{user.username}}    {{user.password}}   {{user.role}}   {{user.is_active}}</li>
+
+    </div>
+</div> -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">prenom</th>
+        <th scope="col">nom</th>
+        <th scope="col">username</th>
+        <th scope="col">password</th>
+        <th scope="col">role</th>
+        <th scope="col">is_active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of listesusers">
+        <th scope="row">1</th>
+        <td>{{user.prenom}}</td>
+        <td> {{user.nom}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.role}}</td>
+        <td>{{user.is_active}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
