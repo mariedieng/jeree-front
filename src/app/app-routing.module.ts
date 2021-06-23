@@ -12,6 +12,9 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LivreursComponent } from './pages/livreurs/livreurs.component';
 import { VendeursComponent } from './pages/vendeurs/vendeurs.component';
 import { ClientsComponent } from './pages/clients/clients.component';
+import { ListesProduitsComponent } from './components/listes-produits/listes-produits.component';
+import { ModifierProduitsComponent } from './compenents/modifier-produits/modifier-produits.component';
+import { ModifierClientsComponent } from './compenents/modifier-clients/modifier-clients.component';
 
 const routes: Routes = [
   {
@@ -46,6 +49,22 @@ const routes: Routes = [
   {
     path:'livreur',
     component: LivreursComponent
+  },
+  {
+    path:'modifierp/:id',
+    component:ModifierProduitsComponent
+  },
+  {
+    path:'modifierc/:id',
+    component:ModifierClientsComponent
+  },
+  {
+    path:'produits',
+    component: ListesProduitsComponent
+  },
+  {
+    path:'produit',
+    component: ListesProduitsComponent
   },
   {
     path:'vendeur',

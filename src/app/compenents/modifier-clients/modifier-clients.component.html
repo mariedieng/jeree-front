@@ -1,0 +1,32 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="row">
+        <label class="connexion">Création Compte</label>
+        <div class="col-4">
+
+            <div class="form-group">
+
+
+                <input type="text" formControlName="nom" placeholder="Nom" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="text" formControlName="prenom" placeholder="Prenom" class="form-control" />
+            </div>
+
+            <div class="form-group ">
+
+                <input type="text " formControlName="Adresse_Client" [value]="loginForm.value.Adresse_Client"  class=" form-control " />
+
+            </div>
+            <div class="form-group ">
+
+                <input type="text " formControlName="Tel_Client" [value]="loginForm.value.Tel_Client"  class="form-control " />
+            </div> 
+        </div>
+    </div>
+    <button [disabled]="loading " class="login ">
+    Envoyer
+    </button>
+
+</form>

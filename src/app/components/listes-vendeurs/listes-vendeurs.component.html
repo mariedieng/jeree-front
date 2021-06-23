@@ -8,18 +8,21 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">users</th>
+        <th scope="col">prenom</th>
+        <th scope="col">nom</th>
         <th scope="col">adresse</th>
         <th scope="col">tel</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let vendeur of listesvendeurs">
-        <th scope="row">1</th>
-        <td>{{vendeur.users}}</td>
-        <td>{{vendeur.adresseVendeur}}</td>
-        <td>{{vendeur.telVendeur}}</td>
+        <td>{{vendeur.prenom}}</td>
+        <td>{{vendeur.nom}}</td>
+        <td>{{vendeur.Adresse_Vendeur}}</td>
+        <td>{{vendeur.Tel_Vendeur}}</td>
+        <td><button class="btn btn-danger" (click)="deleteVendeur(vendeur.id)">supprimer</button></td>
+        <td><button class="btn btn-success" (click)="deleteVendeur(vendeur.id)">supprimer</button></td>
       </tr>
       
     </tbody>

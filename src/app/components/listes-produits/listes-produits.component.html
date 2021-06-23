@@ -1,0 +1,30 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Caracteristique</th>
+        <th scope="col">Categorie</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Quantite</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produit of listesproduits">
+        <th scope="row">{{produit.id}}</th>
+        <td>{{produit.caracteristique}}</td>
+        <td>{{produit.Libelle}}</td>
+        <td>{{produit.nom_produit}}</td>
+        <td>{{produit.quantite_stock}}</td>
+        <td>{{produit.prix_unitaire}}</td>
+        <td>{{produit.description}}</td>
+        <td>
+          <a routerLink="/modifierp/{{produit.id}}" class="btn btn-primary">modifier</a>
+          <button class="btn btn-danger" (click)="deleteProduit(produit.id)">supprimer</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>

@@ -18,10 +18,19 @@ export class ListesVendeursComponent implements OnInit {
     this.listesvendeursService.getAll().subscribe(listesvendeurs => {
       
         this.loading = false;
-        this.listesvendeurs = listesvendeurs['hydra:member'];
+        this.listesvendeurs = listesvendeurs;
         console.log(this.listesvendeurs);
         
     });
+  }
+
+  deleteVendeur(id: number) {
+    if ( confirm('Etes vous  sur de vouloir supprimer ce vendeur')) {
+      this.listesvendeursService.deleteVendeur(id).subscribe(data => {
+        console.log(data);
+        location.reload();
+      });
+    }
   }
 
 }

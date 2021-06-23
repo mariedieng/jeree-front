@@ -1,0 +1,47 @@
+
+<form [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
+
+    <div class="row">
+        <label class="connexion">Création Compte</label>
+        <div class="col-4">
+
+            <div class="form-group">
+
+
+                <input type="text" formControlName="nomProduit" placeholder="nomProduit" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="text" formControlName="prixUnitaire" placeholder="prixUnitaire" class="form-control" />
+            </div>
+
+            <div class="form-group ">
+
+                <input type="text " formControlName="quantiteStock" placeholder="quantiteStock"  [value]="loginForm.value.quantiteStock"  class=" form-control " />
+
+            </div>
+            <div class="form-group ">
+
+                <input type="text " formControlName="caracteristique" placeholder="caracteristique" [value]="loginForm.value.caracteristique"  class="form-control " />
+            </div> 
+            <div class="form-group ">
+
+                <input type="text " formControlName="description" placeholder="description"  [value]="loginForm.value.description"  class="form-control " />
+            </div> 
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Example multiple select</label>
+                <select formControlName="categorie" class="form-control" id="exampleFormControlSelect2">
+                  <option  *ngFor="let option of categorie" [value]="option.id">{{option.Libelle}}</option>
+                </select>
+              </div>
+            
+        </div>
+        <!-- <select formControlName="categorie"  class="form-control" >
+            <option *ngFor="let option of categorie" [value]="option.id" >{{option.libelle}}</option>
+        </select> -->
+    </div>
+    <button [disabled]="loading " class="login ">
+    Envoyer
+    </button>
+
+</form>

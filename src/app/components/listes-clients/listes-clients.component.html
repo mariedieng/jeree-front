@@ -8,18 +8,21 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">users</th>
+        <th scope="col">prenom</th>
+        <th scope="col">nom</th>
         <th scope="col">adresse</th>
         <th scope="col">tel</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let client of listesclients">
-        <th scope="row">1</th>
-        <td>{{client.users}}</td>
-        <td>{{client.adresseClient}} </td>
-        <td>{{client.telClient}}</td>
+        <td>{{client.prenom}}</td>
+        <td>{{client.nom}}</td>
+        <td>{{client.Adresse_Client}} </td>
+        <td>{{client.Tel_Client}}</td>
+        <a routerLink="/modifierc/{{client.id}}" class="btn btn-primary">modifier</a>
+        <td><button class="btn btn-success" (click)="deleteClient(client.id)">supprimer</button></td>
       </tr>
       
     </tbody>

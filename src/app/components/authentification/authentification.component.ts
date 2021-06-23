@@ -41,7 +41,7 @@ export class AuthentificationComponent implements OnInit {
   this.authenticationService.login(user).subscribe(
     data => {
       console.log(data);
-      this.router.navigate(['/']);
+      return this.router.navigate(['/Dashboard']);
     },
     error => {
      /* this.errorMessage = 'username ou mot de passe incorrect';*/

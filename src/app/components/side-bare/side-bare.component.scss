@@ -4,7 +4,16 @@
     margin-top: 60px;
     margin-right: 20px;
     height: 1000px;
-    box-shadow: 1px 1px 12px #555;
+ 
+}
+.side{
+    background-color: rgb(57, 163, 233);
+    color: white;  
+
+}
+.nav-link{
+    color: white; 
+
 }
 
 .col-4 {
@@ -12,19 +21,24 @@
     width: 200px;
 }
 
-// .categories {
-//     font-size: 18px;
-//     color: white;
-//     background-color: rgb(57, 163, 233);
-//     text-align: center;
-//     border: 1px solid;
-// }
+.categories {
+    font-size: 18px;
+    color: white;
+    background-color: rgb(57, 163, 233);
+    text-align: center;
+    border: 1px solid;
+}
 
 .itemp {
     text-align: center;
+    color: rgb(57, 163, 233);
 }
 
 #partenaire {
     width: 100px;
     height: 100px;
+}
+
+.fas {
+    color: rgb(57, 163, 233)
 }

@@ -19,7 +19,7 @@ export class ListesLivreursComponent implements OnInit {
     this.listeslivreursService.getAll().subscribe(listeslivreurs => {
       
       this.loading = false;
-      this.listeslivreurs = listeslivreurs['hydra:member'];
+      this.listeslivreurs = listeslivreurs;
       console.log(this.listeslivreurs);
       
   });
@@ -27,6 +27,14 @@ export class ListesLivreursComponent implements OnInit {
     
         
     
+  }
+  deleteLivreur(id: number) {
+    if ( confirm('Etes vous  sur de vouloir supprimer ce livreur')) {
+      this.listeslivreursService.deleteLivreur(id).subscribe(data => {
+        console.log(data);
+        location.reload();
+      });
+    }
   }
 
 }

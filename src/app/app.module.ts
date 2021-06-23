@@ -18,6 +18,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LivreursComponent } from './pages/livreurs/livreurs.component';
 import { VendeursComponent } from './pages/vendeurs/vendeurs.component';
 import { ClientsComponent } from './pages/clients/clients.component';
+import { ListesProduitsComponent } from './components/listes-produits/listes-produits.component';
+import { ProduitsComponent } from './pages/produits/produits.component';
+import { ModifierProduitsComponent } from './compenents/modifier-produits/modifier-produits.component';
+import { ModifierClientsComponent } from './compenents/modifier-clients/modifier-clients.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,6 +40,10 @@ import { ClientsComponent } from './pages/clients/clients.component';
     LivreursComponent,
     VendeursComponent,
     ClientsComponent,
+    ListesProduitsComponent,
+    ProduitsComponent,
+    ModifierProduitsComponent,
+    ModifierClientsComponent,
     
     
   ],
@@ -43,7 +52,8 @@ import { ClientsComponent } from './pages/clients/clients.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
 
   ],
   providers: [
